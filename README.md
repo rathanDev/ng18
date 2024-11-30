@@ -16,6 +16,7 @@ Programmatically loading components
 Programmatically loading components 
     using ngComponentOutlet
 
+PreloadingStrategy to load components in the bg
 
 ng g c layz-compon 
 
