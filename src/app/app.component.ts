@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef, inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng18';
+
+  viewContainerRef = inject(ViewContainerRef);
+  
+  async loadLazyComponent() {
+    const {LazyComponComponent} = await import('./lazy-compon/lazy-compon.component');
+    this.viewContainerRef.createComponent(LazyComponComponent);
+  }
+
+
 }
