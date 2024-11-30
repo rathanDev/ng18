@@ -3,8 +3,14 @@
 
 <button type="button" routerLink="/customers">Customers</button> <br/>
 <button type="button" routerLink="/orders">Orders</button>  <br/>
-<button type="button" routerLink="/">Home</button> <br/><br/>
+<button type="button" routerLink="/">Home</button> <br/><br/> <br/>
 
-<button type="button" (click)="loadLazyComponent()">Load LazyCompon</button>
+<button type="button" (click)="loadLazyComponent()">Load LazyCompon</button>    <br/>
+
+<button type="button" (click)="loadOutletComponent()">Load OutletCompon</button> <br/>
+
+<div>
+    <ng-container *ngComponentOutlet="outletCompon"></ng-container>
+</div>
 
 <router-outlet />

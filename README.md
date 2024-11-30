@@ -13,6 +13,10 @@ Lazy loading modules
 Programmatically loading components 
     using ViewContinerRef 
 
+Programmatically loading components 
+    using ngComponentOutlet
+
+
 ng g c layz-compon 
 
 ng g c lazy-standalone
