@@ -1,0 +1,1 @@
+import{Ma as n,Na as p,Ra as i,Z as o}from"./chunk-MYX3C57E.js";var c=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=o({type:e,selectors:[["app-lazy-compon"]],decls:2,vars:0,template:function(t,a){t&1&&(n(0,"p"),i(1,"lazy-compon works!"),p())}})}}return e})();export{c as a};
