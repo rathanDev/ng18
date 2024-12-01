@@ -80,7 +80,10 @@ Custom Snippet - clg to console.log()
     Now typing clg and pressing Tab will insert the console.log() template.
 
 
+ng build --base-href https://rathanDev.github.io/ng18/
+npx angular-cli-ghpages --dir=dist/ng18
 
+https://rathanDev.github.io/ng18/
 
 
 
