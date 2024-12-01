@@ -88,4 +88,4 @@ https://rathanDev.github.io/ng18/
 ng build --output-path docs --base-href /ng18/
 
 
-
+ng build --output-path=docs/ --base-href=/justdeploy/ --verbose
