@@ -85,6 +85,7 @@ npx angular-cli-ghpages --dir=dist/ng18
 
 https://rathanDev.github.io/ng18/
 
+ng build --output-path docs --base-href /ng18/
 
 
 
