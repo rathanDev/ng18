@@ -26,10 +26,11 @@ export class LoginComponent {
   }
 
   onSubmit() {
+    const cred = this.loginForm.value;
+    console.log('Login', cred);
+    // if (this.loginForm.valid) {}
     console.log('Login', this.loginForm.value);
-    if (this.loginForm.valid) {
-      console.log('Login', this.loginForm.value);
-    }
+    this.apiService.callPost(cred);
   }
 
   callApi() {

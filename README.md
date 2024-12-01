@@ -52,13 +52,32 @@ Standalone components
 Login component using ReactiveForms
     https://angular.dev/guide/forms/reactive-forms
 
+Http call 
+    provideHttpClient() at imports
+
 
 Format document 
     Shift + Alt + F
 
 
 
+Custom Snippet - clg to console.log()
+    If you don’t have this snippet, you can create a custom snippet in your settings.json by adding a snippet like this:
 
+    Open Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS).
+    Search for Preferences: Configure User Snippets.
+    Select a language or create a global snippet file.
+    Add this to your snippet file:
+    json
+    Copy code
+    "Log Statement": {
+    "prefix": "clg",
+    "body": [
+        "console.log($1);"
+    ],
+    "description": "Console log"
+    }
+    Now typing clg and pressing Tab will insert the console.log() template.
 
 
 
