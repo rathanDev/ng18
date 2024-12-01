@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ApiService } from '../api.service';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -13,7 +12,6 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
-    private apiService: ApiService,
     private authService: AuthService
   ) {
     this.loginForm = this.fb.group({
@@ -42,7 +40,4 @@ export class LoginComponent {
     this.authService.logout();
   }
 
-  callApi() {
-    this.apiService.callApi();
-  }
 }

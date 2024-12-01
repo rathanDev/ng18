@@ -1,22 +1,35 @@
 <!-- <div>app component!</div> -->
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
 
-<hr/>
+<hr />
 
-<button type="button" routerLink="/customers">Customers</button> <br/>
-<button type="button" routerLink="/orders">Orders</button>  <br/>
-<button type="button" routerLink="/">Home</button> <br/><br/> <br/>
+<button type="button" routerLink="/customers">Customers</button> <br />
+<button type="button" routerLink="/orders">Orders</button> <br />
+<button type="button" routerLink="/">Home</button> <br /><br />
+<br />
 
-<button type="button" (click)="loadLazyComponent()">Load LazyCompon</button>    <br/>
+<button type="button" (click)="loadLazyComponent()">Load LazyCompon</button>
+<br />
 
-<button type="button" (click)="loadOutletComponent()">Load OutletCompon</button> <br/>
+<button type="button" (click)="loadOutletComponent()">Load OutletCompon</button>
+<br />
 
 <div>
-    <ng-container *ngComponentOutlet="outletCompon"></ng-container>
+  <ng-container *ngComponentOutlet="outletCompon"></ng-container>
 </div>
 
-<hr/>
+<hr />
 
-<button (click)="testFunc()">TestFunc</button>
+<button (click)="callApi()">Call API</button>
+
+<div>
+  <h3>API Data</h3>
+
+  <!-- <li *ngFor="let item of data"> -->
+  <pre>
+    <code>{{ data }}</code>
+  </pre>
+  <!-- </li> -->
+</div>
 
 <router-outlet />

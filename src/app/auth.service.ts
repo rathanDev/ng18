@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { UserCredentials } from './models/user-credentials';
 import { BehaviorSubject, tap } from 'rxjs';
-import { ACCESS_TOKEN_KEY, JWT_TOKEN_KEY, REFRESH_TOKEN_KEY } from './constant';
+import { ACCESS_TOKEN_KEY, LOGIN_URL, REFRESH_TOKEN_KEY } from './constant';
+import { UserCredentials } from './models/user-credentials';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +20,7 @@ export class AuthService {
       password: 'changeme',
     };
     return this.http
-      .post('https://api.escuelajs.co/api/v1/auth/login', validCred)
+      .post(LOGIN_URL, validCred)
       .pipe(tap((data) => this.doLoginUser(validCred.email, data)))
       .subscribe();
   }
