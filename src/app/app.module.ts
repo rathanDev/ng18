@@ -1,13 +1,14 @@
-import { NgModule, importProvidersFrom } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { authInterceptor } from './auth.interceptor';
 import { LazyComponComponent } from './lazy-compon/lazy-compon.component';
-import { OutletComponComponent } from './outlet-compon/outlet-compon.component';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { provideHttpClient } from '@angular/common/http';
+import { OutletComponComponent } from './outlet-compon/outlet-compon.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { provideHttpClient } from '@angular/common/http';
     LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [provideHttpClient()],
+  providers: [
+    provideHttpClient(withInterceptors([authInterceptor])),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,11 @@ import { ApiService } from '../api.service';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private apiService: ApiService) {
+  constructor(
+    private fb: FormBuilder,
+    private apiService: ApiService,
+    private authService: AuthService
+  ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required]],
       password: ['', [Validators.required]],
@@ -30,7 +35,11 @@ export class LoginComponent {
     console.log('Login', cred);
     // if (this.loginForm.valid) {}
     console.log('Login', this.loginForm.value);
-    this.apiService.callPost(cred);
+    this.authService.login(cred);
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
   callApi() {

@@ -57,9 +57,9 @@ Http call
 
 
 Format document 
-    Shift + Alt + F
-
-
+    Shift + Alt + f
+Optimize imports 
+    Shift + Alt + o
 
 Custom Snippet - clg to console.log()
     If you don’t have this snippet, you can create a custom snippet in your settings.json by adding a snippet like this:
