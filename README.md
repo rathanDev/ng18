@@ -49,10 +49,12 @@ Standalone components
     no need to be declared in NgModule 
 
 
+Login component using ReactiveForms
+    https://angular.dev/guide/forms/reactive-forms
 
 
-
-
+Format document 
+    Shift + Alt + F
 
 
 

@@ -1,6 +1,8 @@
 <!-- <div>app component!</div> -->
 <h1>{{title}}</h1>
 
+<hr/>
+
 <button type="button" routerLink="/customers">Customers</button> <br/>
 <button type="button" routerLink="/orders">Orders</button>  <br/>
 <button type="button" routerLink="/">Home</button> <br/><br/> <br/>
@@ -12,5 +14,9 @@
 <div>
     <ng-container *ngComponentOutlet="outletCompon"></ng-container>
 </div>
+
+<hr/>
+
+<button (click)="testFunc()">TestFunc</button>
 
 <router-outlet />
