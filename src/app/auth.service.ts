@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, tap } from 'rxjs';
 import { ACCESS_TOKEN_KEY, LOGIN_URL, REFRESH_TOKEN_KEY } from './constant';
 import { UserCredentials } from './models/user-credentials';
+import { RedirectService } from './redirect.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,10 @@ export class AuthService {
   private loggedInUser: string = '';
   private isAuthenticated = new BehaviorSubject<boolean>(false);
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private redirectService: RedirectService
+  ) {}
 
   login(cred: UserCredentials) {
     console.log('login', cred);
@@ -26,7 +30,7 @@ export class AuthService {
   }
 
   logout() {
-    console.log("Logout");
+    console.log('Logout');
     localStorage.removeItem(ACCESS_TOKEN_KEY);
     localStorage.removeItem(REFRESH_TOKEN_KEY);
   }
@@ -35,5 +39,6 @@ export class AuthService {
     this.loggedInUser = username;
     localStorage.setItem(ACCESS_TOKEN_KEY, tokens.access_token);
     localStorage.setItem(REFRESH_TOKEN_KEY, tokens.refresh_token);
+    this.redirectService.toDashboard();
   }
 }

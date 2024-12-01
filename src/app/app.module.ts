@@ -9,6 +9,7 @@ import { authInterceptor } from './auth.interceptor';
 import { LazyComponComponent } from './lazy-compon/lazy-compon.component';
 import { LoginComponent } from './login/login.component';
 import { OutletComponComponent } from './outlet-compon/outlet-compon.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { OutletComponComponent } from './outlet-compon/outlet-compon.component';
     LazyComponComponent,
     OutletComponComponent,
     LoginComponent,
+    DashboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [
