@@ -1,6 +1,9 @@
 
 Ref:
-https://www.youtube.com/watch?v=GRelnf8Gtnw
+Lazy loading 
+    https://www.youtube.com/watch?v=GRelnf8Gtnw
+Angular with JWT token 
+    https://www.youtube.com/watch?v=Nh6l9uzU6dg
 
 ng new ng18 --directory . --no-standalone --routing 
 
@@ -11,7 +14,7 @@ Lazy loading modules
     using loadChildren 
 
 Programmatically loading components 
-    using ViewContinerRef 
+    using ViewContainerRef 
 
 Programmatically loading components 
     using ngComponentOutlet
@@ -24,7 +27,26 @@ ng g c lazy-standalone
 
 
 
+# Angular JWT Authentication
 
+@auth/angular-jwt 
+
+Dependency injection using setter
+    private http = inject(HttpClient)
+
+BehaviourSubject to trigger events 
+
+HttpInterceptorFn to set jwt token in API headers 
+
+AuthGuard to for protected pages 
+Router to navigate to other pages 
+
+https://dummyjson.com/
+https://fakeapi.platzi.com/
+
+Standalone components 
+    it can be bootstrapped directly 
+    no need to be declared in NgModule 
 
 
 
